@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+#E1 = E2 = V_clip
 def diode_clipper(input_signal, V_clip, Vk):
     output_signal = input_signal.copy()
     for i in range(len(output_signal)):
