@@ -15,7 +15,7 @@ def VoltageDividerBJT(vcc,R1,R2,RE,RC,B,VBE,VCEsat):
         print('The transistor is in the cut-off mode')
     Pc=IC*VCE
     return (IB,IC,VCE,Pc)
-
+#Example
 vcc = 20  #v
 RB1 = 100  # Kohm
 RB2 = 10  # Kohm
