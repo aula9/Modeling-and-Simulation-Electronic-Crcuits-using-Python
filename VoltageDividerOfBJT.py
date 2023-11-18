@@ -1,3 +1,4 @@
+#Aula
 def VoltageDividerBJT(vcc,R1,R2,RE,RC,B,VBE,VCEsat):
     Rth=R1*R2/(R1+R2)
     vth=vcc*R2/(R1+R2)
@@ -5,17 +6,21 @@ def VoltageDividerBJT(vcc,R1,R2,RE,RC,B,VBE,VCEsat):
     ICsat= (vcc-VCEsat) /(RC+RE)
     IC=B*IB
     if ((IC < ICsat) and (IC > 0)):
-        IC=B*IB; VCE=vcc-IC*(RE+RC)
+        IC=B*IB
+        VCE=vcc-IC*(RE+RC)
         print('The transistor is in the Active mode')
     elif( IC>=ICsat):
-        IC=ICsat; VCE=VCEsat
+        IC=ICsat
+        VCE=VCEsat
         print('The transistor is in the Saturation mode')
     else:
-        IB=0;IC=0; VCE=vcc
+        IB=0
+        IC=0
+        VCE=vcc
         print('The transistor is in the cut-off mode')
     Pc=IC*VCE
     return (IB,IC,VCE,Pc)
-#Example
+#Example ^_^
 vcc = 20  #v
 RB1 = 100  # Kohm
 RB2 = 10  # Kohm
